@@ -1,0 +1,1238 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/filamentgroup/svg-to-png">svg-to-png (v3.1.2)</a>
+</h1>
+<h4>Converts SVGs to PNGs</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.svg-to-png">module svg-to-png</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.convert">
+            function <span class="apidocSignatureSpan">svg-to-png.</span>convert
+            <span class="apidocSignatureSpan">( input, output, opts )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.processing_file">
+            function <span class="apidocSignatureSpan">svg-to-png.</span>processing_file
+            <span class="apidocSignatureSpan">( filename )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">svg-to-png.</span>processing_file.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">svg-to-png.</span>processor</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">svg-to-png.</span>rsvp</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.svg-to-png.processing_file">module svg-to-png.processing_file</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.processing_file.processing_file">
+            function <span class="apidocSignatureSpan">svg-to-png.</span>processing_file
+            <span class="apidocSignatureSpan">( filename )</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.svg-to-png.processing_file.prototype">module svg-to-png.processing_file.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.processing_file.prototype.setImageData">
+            function <span class="apidocSignatureSpan">svg-to-png.processing_file.prototype.</span>setImageData
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.svg-to-png.processor">module svg-to-png.processor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.processor.getStats">
+            function <span class="apidocSignatureSpan">svg-to-png.processor.</span>getStats
+            <span class="apidocSignatureSpan">( gFile , o )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.processor.processFile">
+            function <span class="apidocSignatureSpan">svg-to-png.processor.</span>processFile
+            <span class="apidocSignatureSpan">( filename , o )</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.processor.render">
+            function <span class="apidocSignatureSpan">svg-to-png.processor.</span>render
+            <span class="apidocSignatureSpan">( gFile , o)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.svg-to-png.rsvp">module svg-to-png.rsvp</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.Promise">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>Promise
+            <span class="apidocSignatureSpan">(resolver, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.all">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>all
+            <span class="apidocSignatureSpan">(array, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.allSettled">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>allSettled
+            <span class="apidocSignatureSpan">(entries, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.async">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>async
+            <span class="apidocSignatureSpan">(callback, arg)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.configure">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>configure
+            <span class="apidocSignatureSpan">(name, value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.defer">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>defer
+            <span class="apidocSignatureSpan">(label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.denodeify">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>denodeify
+            <span class="apidocSignatureSpan">(nodeFunc, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.filter">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>filter
+            <span class="apidocSignatureSpan">(promises, filterFn, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.hash">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>hash
+            <span class="apidocSignatureSpan">(object, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.hashSettled">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>hashSettled
+            <span class="apidocSignatureSpan">(object, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.map">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>map
+            <span class="apidocSignatureSpan">(promises, mapFn, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.off">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>off
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.on">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>on
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.race">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>race
+            <span class="apidocSignatureSpan">(array, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.reject">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>reject
+            <span class="apidocSignatureSpan">(reason, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.resolve">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>resolve
+            <span class="apidocSignatureSpan">(value, label)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.svg-to-png.rsvp.rethrow">
+            function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>rethrow
+            <span class="apidocSignatureSpan">(reason)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>EventTarget</span>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.svg-to-png" id="apidoc.module.svg-to-png">module svg-to-png</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.convert" id="apidoc.element.svg-to-png.convert">
+        function <span class="apidocSignatureSpan">svg-to-png.</span>convert
+        <span class="apidocSignatureSpan">( input, output, opts )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">convert = function ( input, output, opts ){
+		opts = opts || {};
+
+		var files;
+		if( typeof input === "string" &amp;&amp; fs.existsSync( input ) &amp;&amp; fs.lstatSync( input ).isDirectory()){
+			files = fs.readdirSync( input ).map( function( file ){
+				return path.join( input, file );
+			});
+		} else if( typeof input === "string" &amp;&amp; fs.existsSync( input ) &amp;&amp; fs.lstatSync( input ).isFile() ) {
+			files = [ input ];
+		} else if( Array.isArray( input ) ){
+			files = input;
+		} else {
+			throw new Error( "Input must be Array of files or String that is a directory" );
+		}
+
+		if( !files.every( function( file ){
+			return path.extname(file) === ".svg";
+		})){
+			throw new Error( "All files passed into svg-to-png must be SVG files, that includes all files in a directory" );
+		}
+
+		if( !files.length ){
+			throw new Error( "Input must be Array of SVG files or String that is a directory that contains some of those" );
+		}
+
+		if( typeof output !== "string" ){
+			throw new Error( "Output folder must be defined and a String" );
+		}
+
+
+		if( !opts.defaultWidth ){
+			opts.defaultWidth = "400px";
+		}
+
+		if( !opts.defaultHeight ){
+			opts.defaultHeight = "300px";
+		}
+
+		// take it to phantomjs to do the rest
+		console.log( "svg-to-png now spawning phantomjs..." );
+		console.log('(using path: ' + phantomJsPath + ')');
+
+		if( opts.compress ){
+			return convertCompress( files, output, opts );
+		} else {
+			return convertNoCompress( files, output, opts );
+		}
+
+
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+## Getting Started
+Install the module with: `npm install svg-to-png`
+
+```javascript
+var svg_to_png = require('svg-to-png');
+
+svg_to_png.<span class="apidocCodeKeywordSpan">convert</span>("input", "output") // async, returns promise
+.then( function(){
+	// Do tons of stuff
+});
+
+```
+
+## Documentation
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.processing_file" id="apidoc.element.svg-to-png.processing_file">
+        function <span class="apidocSignatureSpan">svg-to-png.</span>processing_file
+        <span class="apidocSignatureSpan">( filename )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processing_file = function ( filename ){
+		var svgRegex = /\.svg$/i,
+			fArr = filename.split( fs.separator );
+		this.filename = fArr.pop();
+		this.pathdir = fArr.join( fs.separator );
+		this.uri = "file:///" + fArr.join( "/" ) + "/" + this.filename;
+		if( !fs.exists( this.pathdir + fs.separator + this.filename ) ){
+			throw new Error( this.pathdir + fs.separator + this.filename + " does not exist" );
+		}
+		this.filenamenoext = this.filename.replace( svgRegex , "" );
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.svg-to-png.processing_file" id="apidoc.module.svg-to-png.processing_file">module svg-to-png.processing_file</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.processing_file.processing_file" id="apidoc.element.svg-to-png.processing_file.processing_file">
+        function <span class="apidocSignatureSpan">svg-to-png.</span>processing_file
+        <span class="apidocSignatureSpan">( filename )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processing_file = function ( filename ){
+		var svgRegex = /\.svg$/i,
+			fArr = filename.split( fs.separator );
+		this.filename = fArr.pop();
+		this.pathdir = fArr.join( fs.separator );
+		this.uri = "file:///" + fArr.join( "/" ) + "/" + this.filename;
+		if( !fs.exists( this.pathdir + fs.separator + this.filename ) ){
+			throw new Error( this.pathdir + fs.separator + this.filename + " does not exist" );
+		}
+		this.filenamenoext = this.filename.replace( svgRegex , "" );
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.svg-to-png.processing_file.prototype" id="apidoc.module.svg-to-png.processing_file.prototype">module svg-to-png.processing_file.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.processing_file.prototype.setImageData" id="apidoc.element.svg-to-png.processing_file.prototype.setImageData">
+        function <span class="apidocSignatureSpan">svg-to-png.processing_file.prototype.</span>setImageData
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">setImageData = function (){
+		this.imagedata = fs.read( this.pathdir + fs.separator + this.filename ) || "";
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		var self = this;
+
+		return new RSVP.Promise(function( resolve, reject ){
+			var pFile;
+
+			try {
+				pFile = new ProcessingFile( filename );
+				pFile.<span class="apidocCodeKeywordSpan">setImageData</span>();
+			} catch( e ){
+				reject( e );
+			}
+
+			self.getStats( pFile , o )
+			.then( function( data ){
+				pFile.width = data.width;
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.svg-to-png.processor" id="apidoc.module.svg-to-png.processor">module svg-to-png.processor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.processor.getStats" id="apidoc.element.svg-to-png.processor.getStats">
+        function <span class="apidocSignatureSpan">svg-to-png.processor.</span>getStats
+        <span class="apidocSignatureSpan">( gFile , o )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getStats = function ( gFile , o ){
+
+		return new RSVP.Promise(function(resolve){
+
+			var imagedata = gFile.imagedata,
+				data = {};
+
+			// get svg element's dimensions so we can set the viewport dims later
+			var frag = window.document.createElement( "div" );
+			frag.innerHTML = imagedata;
+			var svgelem = frag.querySelector( "svg" );
+			var pxre = /([\d\.]+)\D*/;
+			var width = svgelem.getAttribute( "width" );
+			var height = svgelem.getAttribute( "height" );
+			if( width ){
+				data.width = width.replace(pxre, "$1px");
+			} else {
+				data.width = o.defaultWidth;
+			}
+			if( height ){
+				data.height = height.replace(pxre, "$1px");
+			} else {
+				data.height = o.defaultHeight;
+			}
+			data.type = "SVG";
+
+			resolve( data );
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			try {
+				pFile = new ProcessingFile( filename );
+				pFile.setImageData();
+			} catch( e ){
+				reject( e );
+			}
+
+			self.<span class="apidocCodeKeywordSpan">getStats</span>( pFile , o )
+			.then( function( data ){
+				pFile.width = data.width;
+				pFile.height = data.height;
+				pFile.type = data.type;
+
+				return self.render( pFile , o );
+			})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.processor.processFile" id="apidoc.element.svg-to-png.processor.processFile">
+        function <span class="apidocSignatureSpan">svg-to-png.processor.</span>processFile
+        <span class="apidocSignatureSpan">( filename , o )</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">processFile = function ( filename , o ){
+		var self = this;
+
+		return new RSVP.Promise(function( resolve, reject ){
+			var pFile;
+
+			try {
+				pFile = new ProcessingFile( filename );
+				pFile.setImageData();
+			} catch( e ){
+				reject( e );
+			}
+
+			self.getStats( pFile , o )
+			.then( function( data ){
+				pFile.width = data.width;
+				pFile.height = data.height;
+				pFile.type = data.type;
+
+				return self.render( pFile , o );
+			})
+			.then( function(){
+				resolve();
+			})
+			.catch( function(err){
+				reject(err);
+			});
+		});
+
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	if( !options.dest.match( fs.separator + '$' ) ){
+		options.dest += fs.separator;
+	}
+
+
+	var promises = options.inputFiles.map( function( file ){
+		return processor.<span class="apidocCodeKeywordSpan">processFile</span>( file, options );
+	});
+
+
+	RSVP.all( promises )
+	.then( function(){
+		phantom.exit();
+	})
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.processor.render" id="apidoc.element.svg-to-png.processor.render">
+        function <span class="apidocSignatureSpan">svg-to-png.processor.</span>render
+        <span class="apidocSignatureSpan">( gFile , o)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">render = function ( gFile , o) {
+
+		var page = require( "webpage" ).create();
+
+		var pngName = gFile.filenamenoext + ".png";
+		var filename = gFile.pathdir + fs.separator + gFile.filename;
+		// set page viewport size to svg dimensions
+		page.viewportSize = {  width: parseFloat(gFile.width), height: parseFloat(gFile.height) };
+		// open svg file in webkit to make a png || png to grab base64
+		return new RSVP.Promise(function(resolve, reject){
+			page.open( gFile.uri, function( status ){
+				if( status === "success" ){
+					// create tmp file
+					page.render( o.dest + pngName );
+					var pngimgstring = page.renderBase64( "png" );
+					resolve( pngimgstring );
+				} else {
+					reject( status + ": " + "Phantom had an error opening - " + filename + " - " + "Does it exist? " + fs.exists(filename));
+				}
+			}); //page.open
+		});
+	}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		// set page viewport size to svg dimensions
+		page.viewportSize = {  width: parseFloat(gFile.width), height: parseFloat(gFile.height) };
+		// open svg file in webkit to make a png || png to grab base64
+		return new RSVP.Promise(function(resolve, reject){
+			page.open( gFile.uri, function( status ){
+				if( status === "success" ){
+					// create tmp file
+					page.<span class="apidocCodeKeywordSpan">render</span>( o.dest + pngName );
+					var pngimgstring = page.renderBase64( "png" );
+					resolve( pngimgstring );
+				} else {
+					reject( status + ": " + "Phantom had an error opening - " + filename + " - " + "Does it
+exist? " + fs.exists(filename));
+				}
+			}); //page.open
+		});
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.svg-to-png.rsvp" id="apidoc.module.svg-to-png.rsvp">module svg-to-png.rsvp</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.Promise" id="apidoc.element.svg-to-png.rsvp.Promise">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>Promise
+        <span class="apidocSignatureSpan">(resolver, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$promise$$Promise(resolver, label) {
+  this._id = lib$rsvp$promise$$counter++;
+  this._label = label;
+  this._state = undefined;
+  this._result = undefined;
+  this._subscribers = [];
+
+  if (lib$rsvp$config$$config.instrument) {
+    lib$rsvp$instrument$$default('created', this);
+  }
+
+  if (lib$rsvp$$internal$$noop !== resolver) {
+    if (!lib$rsvp$utils$$isFunction(resolver)) {
+      lib$rsvp$promise$$needsResolver();
+    }
+
+    if (!(this instanceof lib$rsvp$promise$$Promise)) {
+      lib$rsvp$promise$$needsNew();
+    }
+
+    lib$rsvp$$internal$$initializePromise(this, resolver);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	// {
+	// width: int
+	// height: int
+	// type: "SVG" || "PNG"
+	// }
+	exports.getStats = function( gFile , o ){
+
+		return new RSVP.<span class="apidocCodeKeywordSpan">Promise</span>(function(resolve){
+
+			var imagedata = gFile.imagedata,
+				data = {};
+
+			// get svg element's dimensions so we can set the viewport dims later
+			var frag = window.document.createElement( "div" );
+			frag.innerHTML = imagedata;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.all" id="apidoc.element.svg-to-png.rsvp.all">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>all
+        <span class="apidocSignatureSpan">(array, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$all$$all(array, label) {
+  return lib$rsvp$promise$$default.all(array, label);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+
+	var promises = options.inputFiles.map( function( file ){
+		return processor.processFile( file, options );
+	});
+
+
+	RSVP.<span class="apidocCodeKeywordSpan">all</span>( promises )
+	.then( function(){
+		phantom.exit();
+	})
+	.catch(function(err){
+		throw new Error( err );
+	});
+})();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.allSettled" id="apidoc.element.svg-to-png.rsvp.allSettled">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>allSettled
+        <span class="apidocSignatureSpan">(entries, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$all$settled$$allSettled(entries, label) {
+  return new lib$rsvp$all$settled$$AllSettled(lib$rsvp$promise$$default, entries, label).promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.async" id="apidoc.element.svg-to-png.rsvp.async">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>async
+        <span class="apidocSignatureSpan">(callback, arg)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$$async(callback, arg) {
+  lib$rsvp$config$$config.async(callback, arg);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	// These plugins provide necessary tasks.
+	grunt.loadNpmTasks('grunt-contrib-nodeunit');
+	grunt.loadNpmTasks('grunt-contrib-qunit');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-watch');
+
+	grunt.task.registerTask( 'phantom-unit', 'A task to run the phantom tests', function(){
+		var done = this.<span class="apidocCodeKeywordSpan">async</span>();
+		var phantomUnit = require( 'phantom-unit' );
+		phantomUnit.test( "test/phantom/processing-file_test.js", function(){
+			done();
+		});
+	});
+
+	// Default task.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.configure" id="apidoc.element.svg-to-png.rsvp.configure">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>configure
+        <span class="apidocSignatureSpan">(name, value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$config$$configure(name, value) {
+  if (name === 'onerror') {
+    // handle for legacy users that expect the actual
+    // error to be passed to their function added via
+    // `RSVP.configure('onerror', someFunctionHere);`
+    lib$rsvp$config$$config['on']('error', value);
+    return;
+  }
+
+  if (arguments.length === 2) {
+    lib$rsvp$config$$config[name] = value;
+  } else {
+    return lib$rsvp$config$$config[name];
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    lib$rsvp$events$$default['mixin'](lib$rsvp$config$$config);
+
+    function lib$rsvp$config$$configure(name, value) {
+if (name === 'onerror') {
+  // handle for legacy users that expect the actual
+  // error to be passed to their function added via
+  // `RSVP.<span class="apidocCodeKeywordSpan">configure</span>('onerror', someFunctionHere);`
+  lib$rsvp$config$$config['on']('error', value);
+  return;
+}
+
+if (arguments.length === 2) {
+  lib$rsvp$config$$config[name] = value;
+} else {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.defer" id="apidoc.element.svg-to-png.rsvp.defer">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>defer
+        <span class="apidocSignatureSpan">(label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$defer$$defer(label) {
+  var deferred = { };
+
+  deferred['promise'] = new lib$rsvp$promise$$default(function(resolve, reject) {
+    deferred['resolve'] = resolve;
+    deferred['reject'] = reject;
+  }, label);
+
+  return deferred;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.denodeify" id="apidoc.element.svg-to-png.rsvp.denodeify">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>denodeify
+        <span class="apidocSignatureSpan">(nodeFunc, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$node$$denodeify(nodeFunc, options) {
+  var fn = function() {
+    var self = this;
+    var l = arguments.length;
+    var args = new Array(l + 1);
+    var arg;
+    var promiseInput = false;
+
+    for (var i = 0; i &lt; l; ++i) {
+      arg = arguments[i];
+
+      if (!promiseInput) {
+        // TODO: clean this up
+        promiseInput = lib$rsvp$node$$needsPromiseInput(arg);
+        if (promiseInput === lib$rsvp$node$$GET_THEN_ERROR) {
+          var p = new lib$rsvp$promise$$default(lib$rsvp$$internal$$noop);
+          lib$rsvp$$internal$$reject(p, lib$rsvp$node$$GET_THEN_ERROR.value);
+          return p;
+        } else if (promiseInput &amp;&amp; promiseInput !== true) {
+          arg = lib$rsvp$node$$wrapThenable(promiseInput, arg);
+        }
+      }
+      args[i] = arg;
+    }
+
+    var promise = new lib$rsvp$promise$$default(lib$rsvp$$internal$$noop);
+
+    args[l] = function(err, val) {
+      if (err)
+        lib$rsvp$$internal$$reject(promise, err);
+      else if (options === undefined)
+        lib$rsvp$$internal$$resolve(promise, val);
+      else if (options === true)
+        lib$rsvp$$internal$$resolve(promise, lib$rsvp$node$$arrayResult(arguments));
+      else if (lib$rsvp$utils$$isArray(options))
+        lib$rsvp$$internal$$resolve(promise, lib$rsvp$node$$makeObject(arguments, options));
+      else
+        lib$rsvp$$internal$$resolve(promise, val);
+    };
+
+    if (promiseInput) {
+      return lib$rsvp$node$$handlePromiseInput(promise, args, nodeFunc, self);
+    } else {
+      return lib$rsvp$node$$handleValueInput(promise, args, nodeFunc, self);
+    }
+  };
+
+  fn.__proto__ = nodeFunc;
+
+  return fn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.filter" id="apidoc.element.svg-to-png.rsvp.filter">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>filter
+        <span class="apidocSignatureSpan">(promises, filterFn, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$filter$$filter(promises, filterFn, label) {
+  return lib$rsvp$promise$$default.all(promises, label).then(function(values) {
+    if (!lib$rsvp$utils$$isFunction(filterFn)) {
+      throw new TypeError("You must pass a function as filter's second argument.");
+    }
+
+    var length = values.length;
+    var filtered = new Array(length);
+
+    for (var i = 0; i &lt; length; i++) {
+      filtered[i] = filterFn(values[i]);
+    }
+
+    return lib$rsvp$promise$$default.all(filtered, label).then(function(filtered) {
+      var results = new Array(length);
+      var newLength = 0;
+
+      for (var i = 0; i &lt; length; i++) {
+        if (filtered[i]) {
+          results[newLength] = values[i];
+          newLength++;
+        }
+      }
+
+      results.length = newLength;
+
+      return results;
+    });
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+			test.expect(1);
+			// tests here
+			var bigDir = fs.readdirSync( path.resolve( path.join( __dirname, "big" ) ) )
+			.map(function(file){
+				return path.resolve( path.join( __dirname, "big", file ) );
+			}),
+
+			bigDirSVGs = bigDir.<span class="apidocCodeKeywordSpan">filter</span>( function( file ){
+				return path.extname(file) === ".svg";
+			});
+
+			svg_to_png.convert(
+				bigDirSVGs,
+				path.join( __dirname,"output"), {
+				compress: true
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.hash" id="apidoc.element.svg-to-png.rsvp.hash">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>hash
+        <span class="apidocSignatureSpan">(object, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$hash$$hash(object, label) {
+  return new lib$rsvp$promise$hash$$default(lib$rsvp$promise$$default, object, label).promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.hashSettled" id="apidoc.element.svg-to-png.rsvp.hashSettled">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>hashSettled
+        <span class="apidocSignatureSpan">(object, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$hash$settled$$hashSettled(object, label) {
+  return new lib$rsvp$hash$settled$$HashSettled(lib$rsvp$promise$$default, object, label).promise;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.map" id="apidoc.element.svg-to-png.rsvp.map">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>map
+        <span class="apidocSignatureSpan">(promises, mapFn, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$map$$map(promises, mapFn, label) {
+  return lib$rsvp$promise$$default.all(promises, label).then(function(values) {
+    if (!lib$rsvp$utils$$isFunction(mapFn)) {
+      throw new TypeError("You must pass a function as map's second argument.");
+    }
+
+    var length = values.length;
+    var results = new Array(length);
+
+    for (var i = 0; i &lt; length; i++) {
+      results[i] = mapFn(values[i]);
+    }
+
+    return lib$rsvp$promise$$default.all(results, label);
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	};
+
+	if( !options.dest.match( fs.separator + '$' ) ){
+		options.dest += fs.separator;
+	}
+
+
+	var promises = options.inputFiles.<span class="apidocCodeKeywordSpan">map</span>( function( file ){
+		return processor.processFile( file, options );
+	});
+
+
+	RSVP.all( promises )
+	.then( function(){
+		phantom.exit();
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.off" id="apidoc.element.svg-to-png.rsvp.off">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>off
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$$off() {
+  lib$rsvp$config$$config['off'].apply(lib$rsvp$config$$config, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```javascript
+function doStuff() { // do stuff! }
+object.on('stuff', doStuff);
+
+object.trigger('stuff'); // doStuff will be called
+
+// Unregister ONLY the doStuff callback
+object.<span class="apidocCodeKeywordSpan">off</span>('stuff', doStuff);
+object.trigger('stuff'); // doStuff will NOT be called
+```
+
+If you don't pass a `callback` argument to `off`, ALL callbacks for the
+event will not be executed when the event fires. For example:
+
+```javascript
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.on" id="apidoc.element.svg-to-png.rsvp.on">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>on
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$$on() {
+  lib$rsvp$config$$config['on'].apply(lib$rsvp$config$$config, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+		system.stderr.write( msgStack.join('\n') );
+		phantom.exit(1);
+	};
+
+	var RSVP = require('./rsvp');
+	var processor = require('./processor');
+
+	RSVP.<span class="apidocCodeKeywordSpan">on</span>('error', function(reason) {
+		throw new Error( reason );
+	});
+
+	// alternate syntax for PhantomJS 2.x (system.args) / 1.x (phantom.args)
+	var options = (typeof(phantom.args) === "undefined") ? {
+		inputFiles: JSON.parse(system.args[1]),
+		dest: system.args[2],
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.race" id="apidoc.element.svg-to-png.rsvp.race">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>race
+        <span class="apidocSignatureSpan">(array, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$race$$race(array, label) {
+  return lib$rsvp$promise$$default.race(array, label);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+      return lib$rsvp$node$$getThen(arg);
+    }
+  } else {
+    return false;
+  }
+}
+function lib$rsvp$race$$race(array, label) {
+  return lib$rsvp$promise$$default.<span class="apidocCodeKeywordSpan">race</span>(array, label);
+}
+var lib$rsvp$race$$default = lib$rsvp$race$$race;
+function lib$rsvp$reject$$reject(reason, label) {
+  return lib$rsvp$promise$$default.reject(reason, label);
+}
+var lib$rsvp$reject$$default = lib$rsvp$reject$$reject;
+function lib$rsvp$resolve$$resolve(value, label) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.reject" id="apidoc.element.svg-to-png.rsvp.reject">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>reject
+        <span class="apidocSignatureSpan">(reason, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$reject$$reject(reason, label) {
+  return lib$rsvp$promise$$default.reject(reason, label);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  }
+}
+function lib$rsvp$race$$race(array, label) {
+  return lib$rsvp$promise$$default.race(array, label);
+}
+var lib$rsvp$race$$default = lib$rsvp$race$$race;
+function lib$rsvp$reject$$reject(reason, label) {
+  return lib$rsvp$promise$$default.<span class="apidocCodeKeywordSpan">reject</span>(reason, label);
+}
+var lib$rsvp$reject$$default = lib$rsvp$reject$$reject;
+function lib$rsvp$resolve$$resolve(value, label) {
+  return lib$rsvp$promise$$default.resolve(value, label);
+}
+var lib$rsvp$resolve$$default = lib$rsvp$resolve$$resolve;
+function lib$rsvp$rethrow$$rethrow(reason) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.resolve" id="apidoc.element.svg-to-png.rsvp.resolve">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>resolve
+        <span class="apidocSignatureSpan">(value, label)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$resolve$$resolve(value, label) {
+  return lib$rsvp$promise$$default.resolve(value, label);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+lib$rsvp$enumerator$$Enumerator.prototype._eachEntry = function(entry, i) {
+  var c = this._instanceConstructor;
+  if (lib$rsvp$utils$$isMaybeThenable(entry)) {
+    if (entry.constructor === c &amp;&amp; entry._state !== lib$rsvp$$internal$$PENDING) {
+      entry._onError = null;
+      this._settledAt(entry._state, i, entry._result);
+    } else {
+      this._willSettleAt(c.<span class="apidocCodeKeywordSpan">resolve</span>(entry), i);
+    }
+  } else {
+    this._remaining--;
+    this._result[i] = this._makeResult(lib$rsvp$$internal$$FULFILLED, i, entry);
+  }
+};
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.svg-to-png.rsvp.rethrow" id="apidoc.element.svg-to-png.rsvp.rethrow">
+        function <span class="apidocSignatureSpan">svg-to-png.rsvp.</span>rethrow
+        <span class="apidocSignatureSpan">(reason)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function lib$rsvp$rethrow$$rethrow(reason) {
+  setTimeout(function() {
+    throw reason;
+  });
+  throw reason;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
